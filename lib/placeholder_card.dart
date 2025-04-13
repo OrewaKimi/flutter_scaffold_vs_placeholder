@@ -5,41 +5,51 @@ class PlaceholderCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: Colors.grey[200],
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      elevation: 4,
-      child: Column(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(12),
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: Colors.grey,
-              borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
-            ),
-            child: const Text(
-              'Contoh Placeholder',
-              style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.bold),
-            ),
+    return TweenAnimationBuilder<double>(
+      tween: Tween(begin: 0, end: 1),
+      duration: const Duration(milliseconds: 600),
+      builder: (context, value, child) {
+        return Opacity(
+          opacity: value,
+          child: Transform.scale(
+            scale: value,
+            child: child,
           ),
-          const Expanded(
-            child: Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Placeholder(
-                color: Colors.red,
-                strokeWidth: 2,
+        );
+      },
+      child: Card(
+        elevation: 8,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        color: Colors.white.withOpacity(0.9),
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: const [
+              Icon(Icons.crop_square, size: 60, color: Colors.redAccent),
+              SizedBox(height: 16),
+              Text(
+                'Placeholder Layout',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-            ),
+              Divider(height: 24),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Placeholder(
+                    color: Colors.redAccent,
+                    strokeWidth: 2,
+                  ),
+                ),
+              ),
+              SizedBox(height: 8),
+              Text(
+                'Digunakan sebagai penanda layout sementara',
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.grey),
+              )
+            ],
           ),
-          const Padding(
-            padding: EdgeInsets.only(bottom: 12),
-            child: Text(
-              'Ini hanya tampilan dummy sementara',
-              style: TextStyle(color: Colors.grey),
-            ),
-          )
-        ],
+        ),
       ),
     );
   }
