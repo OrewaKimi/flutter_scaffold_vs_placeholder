@@ -33,7 +33,12 @@ class ComparisonScreen extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text("Scaffold vs Placeholder"),
+        title: const Text("Scaffold vs Placeholder",
+            style: TextStyle(
+              fontSize: 24,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            )),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
