@@ -1,4 +1,4 @@
-# scaffold_vs_placeholder
+# scaffold placeholder
 ![image](https://github.com/user-attachments/assets/52bfd250-da9e-4439-b44c-17c0b267d6b3)
 
 # 📱 Perbandingan Flutter: Scaffold vs Placeholder
