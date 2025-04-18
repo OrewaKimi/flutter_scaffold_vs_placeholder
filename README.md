@@ -1,6 +1,4 @@
-# scaffold placeholder
-![image](https://github.com/user-attachments/assets/52bfd250-da9e-4439-b44c-17c0b267d6b3)
-
+# Scaffold vs Placeholder
 # 📱 Perbandingan Flutter: Scaffold vs Placeholder
 
 Proyek ini menunjukkan perbedaan mendasar antara **`Scaffold`** dan **`Placeholder`** di Flutter, lengkap dengan tampilan UI modern dan interaktif.
@@ -54,7 +52,7 @@ Biasanya dipakai saat:
 ---
 
 ## 📸 Tampilan Aplikasi
-
+![image](https://github.com/user-attachments/assets/52bfd250-da9e-4439-b44c-17c0b267d6b3)
 Aplikasi ini menunjukkan kedua widget secara berdampingan agar kamu bisa langsung lihat perbedaannya dengan jelas, lengkap dengan animasi dan UI modern berbasis Flutter Material 3.
 
 ---
